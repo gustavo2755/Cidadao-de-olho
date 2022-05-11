@@ -4,9 +4,8 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 
-class DeputadoSeeder extends Seeder
+class RedesSociaiSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,9 +14,6 @@ class DeputadoSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('deputados')->insert([
-            
-            
-        ]);
+        //
     }
 }

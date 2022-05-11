@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Http;
+use App\Http\Controllers\ControladorApi;
+use App\Models\Deputado;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +16,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/**
+     * This is where i testing my functions , using this routes to check if there is anything wrong,before i 
+     * finish this project this is gonna be at the rith place.
+     */
 Route::get('/', function () {
-    return view('welcome');
+    $response=http::get(url:'http://dadosabertos.almg.gov.br/ws/deputados/lista_telefonica?formato=json');
+    dd($response);
 });
+Route::get('/teste', [ControladorApi::class, 'storedep']);
+Route::get('/testeR', [ControladorApi::class, 'storeredes']);
+

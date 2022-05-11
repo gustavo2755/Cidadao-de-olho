@@ -10,20 +10,13 @@ class Deputado extends Model
     use HasFactory;
 
     /**
-     * The attributes that are mass assignable.
-     *
-     * @var array<int, string>
+     * This is a model for my Deputados table.
      */
+     
     protected $fillable = [
+        'deputado_ids',
         'name',
-        'email',
-        'password',
     ];
 
-    /* Indicates if the model should be timestamped.
-    *
-    * @var bool
-    */
-   public $timestamps = true;
 
 }
