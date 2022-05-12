@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Http;
 use Illuminate\Http\Client\Response;
 use App\Models\Deputado;
 use App\Models\RedesSociai;
+
 class ControladorApi extends Controller
 {
 
@@ -45,48 +46,83 @@ class ControladorApi extends Controller
         $flickr = 0;
         $linkedIn = 0;
         $twitter = 0;
-
         foreach ($dados->list as $nome) {
             foreach ($nome->redesSociais as $aux) {
                 foreach ($aux->redeSocial as $rede) {
-                    switch($rede){
+                    switch ($rede) {
                         case 'Facebook':
                             $facebook += 1;
-                        break;
+                            break;
                         case 'Instagram':
                             $instagram += 1;
-                        break;
+                            break;
                         case 'Twitter':
-                             $twitter += 1;
-                        break;
+                            $twitter += 1;
+                            break;
                         case 'WhatsApp':
                             $whats += 1;
-                        break;
+                            break;
                         case 'SoundCloud':
                             $soundCloud += 1;
-                        break;
+                            break;
                         case 'Youtube':
                             $youtube += 1;
-                        break;
+                            break;
                         case 'Flickr':
                             $flickr += 1;
-                        break;
+                            break;
                         case 'LinkedIn':
                             $linkedIn += 1;
-                        break;
+                            break;
                     }
                 }
             }
         }
-        $redes = new RedesSociai();
-        $redes->facebook = $facebook;
-        $redes->instagram = $instagram;
-        $redes->twitter = $twitter;
-        $redes->whats = $whats;
-        $redes->soundCloud = $soundCloud;
-        $redes->Youtube =$youtube;
-        $redes->Flickr = $flickr;
-        $redes->LinkedIn = $linkedIn;
-        $redes->save();
+        for ($i = 0; $i <= 8; $i++) {
+            $redes = new RedesSociai();
+            switch ($i) {
+                case '0':
+                    $redes->redes = 'Facebook';
+                    $redes->quantities = $facebook;
+                    $redes->save();
+                    break;
+                case '1':
+                    $redes->redes = 'Instagram';
+                    $redes->quantities = $instagram;
+                    $redes->save();
+                    break;
+                case '2':
+                    $redes->redes = 'Twitter';
+                    $redes->quantities = $twitter;
+                    $redes->save();
+                    break;
+                case '3':
+                    $redes->redes = 'WhatsApp';
+                    $redes->quantities = $whats;
+                    $redes->save();
+                    break;
+                case '4':
+                    $redes->redes = 'SoundCloud';
+                    $redes->quantities = $soundCloud;
+                    $redes->save();
+                    break;
+                case '5':
+                    $redes->redes = 'Youtube';
+                    $redes->quantities = $youtube;
+                    $redes->save();
+                    break;
+                case '6':
+                    $redes->redes = 'Flickr';
+                    $redes->quantities = $flickr;
+                    $redes->save();
+                    break;
+                case '7':
+                    $redes->redes = 'LinkedIn';
+                    $redes->quantities = $linkedIn;
+                    $redes->save();
+                    break;
+                    
+            }
+        }
     }
 }

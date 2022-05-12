@@ -13,13 +13,7 @@ class RedesSociai extends Model
     use HasFactory;
 
     protected $fillable = [
-        'facebook',
-        'instagram',
-        'twitter',
-        'whats',
-        'soundCloud',
-        'Youtube',
-        'Flickr',
-        'LinkedIn',
+        'redes',
+        'quantities',
     ];
 }

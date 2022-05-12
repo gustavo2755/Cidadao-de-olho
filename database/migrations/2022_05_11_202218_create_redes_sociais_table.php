@@ -16,14 +16,14 @@ return new class extends Migration
         //function criada , as redes socias serão salvas em integer pois com isso sera mais fácil a listagem de mais populares de forma descrescente
         Schema::create('redes_sociais', function (Blueprint $table) {
             $table->id();
-            $table->integer('facebook');
-            $table->integer('instagram');
-            $table->integer('twitter');
-            $table->integer('whats');
-            $table->integer('soundCloud');
-            $table->integer('Youtube');
-            $table->integer('Flickr');
-            $table->integer('LinkedIn');
+            $table->string('redes');
+            $table->integer('quantities');
+            // $table->integer('twitter');
+            // $table->integer('whats');
+            // $table->integer('soundCloud');
+            // $table->integer('Youtube');
+            // $table->integer('Flickr');
+            // $table->integer('LinkedIn');
             $table->timestamps();
         });
     }
