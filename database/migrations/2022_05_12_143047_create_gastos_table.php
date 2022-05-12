@@ -13,11 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        //function criada , as redes socias serão salvas em integer pois com isso sera mais fácil a listagem de mais populares de forma descrescente
-        Schema::create('redes_sociais', function (Blueprint $table) {
+        Schema::create('gastos', function (Blueprint $table) {
             $table->id();
-            $table->string('redes');
-            $table->integer('quantities');
+            $table->integer('deputado_ids');
+            $table->integer('ano');
+            $table->integer('mes');
+            $table->double('valor_gasto');
             $table->timestamps();
         });
     }
@@ -29,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('redes_sociais');
+        Schema::dropIfExists('gastos');
     }
 };
