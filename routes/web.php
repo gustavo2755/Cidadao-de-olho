@@ -24,6 +24,6 @@ Route::get('/', function () {
     $response=http::get(url:'http://dadosabertos.almg.gov.br/ws/deputados/lista_telefonica?formato=json');
     dd($response);
 });
-Route::get('/teste', [ControladorApi::class, 'storedep']);
-Route::get('/testeR', [ControladorApi::class, 'storeredes']);
+Route::get('/teste', [ControladorApi::class, 'organizadeput']);
+Route::get('/testeR', [ControladorApi::class, 'organizaredes']);
 

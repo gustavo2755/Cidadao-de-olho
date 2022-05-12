@@ -18,12 +18,26 @@ class ControladorApi extends Controller
     {
         $mostrarrede = DB::Table('redes_sociais')
 
-        ->orderBy('quantities', 'asc')
-        ->orderBy('redes', 'asc')
+        ->orderBy('quantities', 'desc')
+        ->orderBy('redes', 'desc')
         ->limit(8)
         ->get();
+        
+        return $mostrarrede;
+    }
 
-        dd($mostrarrede);
+    
+    function organizadeput()
+    {
+        for ($i = 1;$i <= 12;$i++ ){
+           
+            $gastos = DB::Table('gastos')->where('mes',$i)
+            ->orderBy('valor_gasto', 'desc')
+            ->limit(5)
+            ->get();
+            $gastosaux[] = $gastos;
 
+        }
+        return $gastosaux;
     }
 }
