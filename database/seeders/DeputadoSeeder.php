@@ -9,15 +9,12 @@ use Illuminate\Support\Facades\DB;
 
 class DeputadoSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
+
 
       /**
      * This function is design to get the names and id of the deputys so i can use them later to get more information for the
      * other API.
+     * @return void
      */
     
     public function run()

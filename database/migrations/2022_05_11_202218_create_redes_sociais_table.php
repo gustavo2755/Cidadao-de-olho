@@ -13,7 +13,6 @@ return new class extends Migration
      */
     public function up()
     {
-        //function criada , as redes socias serão salvas em integer pois com isso sera mais fácil a listagem de mais populares de forma descrescente
         Schema::create('redes_sociais', function (Blueprint $table) {
             $table->id();
             $table->string('redes');

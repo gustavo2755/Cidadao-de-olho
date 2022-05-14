@@ -9,11 +9,12 @@ use Illuminate\Database\Seeder;
 
 class GastoSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
+      /**
+     * This function is design to get how much each deputy spent
+     * 
      * @return void
      */
+    
     public function run()
     {
         
@@ -28,7 +29,6 @@ class GastoSeeder extends Seeder
                 "/2019/" .
                 $i .
                 "?formato=json";
-                echo  $url . "\n";
                 $dados = json_decode(file_get_contents($url));
                 $total = 0.0;
                 foreach($dados->list as $item){
