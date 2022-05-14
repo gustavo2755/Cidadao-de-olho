@@ -18,9 +18,9 @@ Projeto realizado para demonstrar conhecimento no laravel.
     
     
 # Como Utilizar
-    Para utilizar o script, primeiramente devemos fazer o carregamento do banco de dados , como eu utilizei as pastas dos seeders e migrates,
-    somente será necessário a utilização dos comandos " php artisan migrate " e " php artisan db: seed ",
-    após essses comandos serão carregados as tabelas do bancos de dados. 
+    Para utilizar o script, primeiramente devemos fazer o carregamento do banco de dados , como eu utilizei as pastas
+    dos seeders e migrates,somente será necessário a utilização dos comandos " php artisan migrate " e 
+    " php artisan db: seed ", após essses comandos serão carregados as tabelas do bancos de dados. 
     Com os bancos de dados carregados está na hora de utilizar as rotas, (recomendação postman ou eclipse).
     As rotas estarão descritas abaixo com suas funções.
     
