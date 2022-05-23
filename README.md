@@ -10,7 +10,7 @@ Projeto realizado para demonstrar conhecimento no laravel.
 
 
 # Descrição
-    O projeto tem a finalizade de mostar os dois escripts citados em * [Rotas](#Rotas),
+    O projeto tem a finalizade de mostar os dois scripts citados em * [Rotas](#Rotas),
     feito para monstrar conhecimento adquirido em laravel e back-end,
     experiência muito agradavél pelo ambiente e suas facilitações.
     
